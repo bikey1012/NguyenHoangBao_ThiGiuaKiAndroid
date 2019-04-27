@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">1606020003_NguyenHoangBao</string>
+    <string name="title">Account Login</string>
+    <string name="code">Mã sản phẩm</string>
+    <string name="name">Tên sản phẩm</string>
+    <string name="price">Giá sản phẩm</string>
+    <string name="desription">Mô tả</string>
+    <string name="producer">Nhà sản xuất</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

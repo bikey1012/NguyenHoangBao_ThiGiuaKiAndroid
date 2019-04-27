@@ -19,17 +19,22 @@ import java.util.Map;
 public class PhoneActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<PhoneModel> models;
-    String id = "";
+    int id ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone);
         models = new ArrayList<>();
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null)
+        {
+            id=getIntent().getExtras().getInt("id");
+        }
         recyclerView = findViewById(R.id.phone_recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         Map<String,String> mMap = new HashMap<>();
-        mMap.put("id","8");
+        mMap.put("id",String.valueOf(id));
         new PhoneAsyncTask(new IView() {
             @Override
             public void onGetDataSuccess(JSONArray jsonArray) {

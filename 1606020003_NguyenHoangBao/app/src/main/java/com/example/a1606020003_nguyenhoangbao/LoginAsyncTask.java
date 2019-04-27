@@ -94,7 +94,7 @@ public class LoginAsyncTask extends AsyncTask<String,Boolean, JSONObject> {
         if (jsonObject != null) {
             try {
                 //int mUserID = jsonObject.getInt("user_id");
-                JSONObject jsonobject1 = jsonObject.getJSONObject("reponse-data");
+                JSONObject jsonobject1 = jsonObject.getJSONObject("response_data");
                 int hID =  jsonobject1.getInt("user_id");
                 int mResult = jsonObject.getInt("result");
                 String mMessage = jsonObject.getString("response_message");
